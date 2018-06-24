@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  font-family: 'Libre Baskerville';
+}
+
+button {
+  background-color: gold;
+  color: black;
+  border: 1px solid goldenrod;
+  border-radius: 2px;
+  padding: 7px 15px 7px 15px;
+  margin-bottom: 40px;
+}
+
+a {
+  color: lightblue;
+  display: block;
+}
+
+#item {
+  width: 400px;
+  height: 180px;
+  margin: 20px auto auto auto;
+  display: none;
+  border-radius: 3px;
+  padding-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+#attributions {
+  color: lightblue;
+  margin-top: 50px;
+  font-size: 11px;
+}
