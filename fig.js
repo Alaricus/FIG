@@ -14,9 +14,9 @@ const getColor = (color) => {
 
 const getMaterial = (material) => {
   const materials = new Map();
-  materials.set('Bronze', { name: 'Bronze', categories: ['Mele', 'Armor'], damageMod: 0.75, speedMod: 1.5, armorMod: 1, weightMod: 1 });
-  materials.set('Iron', { name: 'Iron', categories: ['Mele', 'Armor'], damageMod: 1, speedMod: 1.25, armorMod: 1.5, weightMod: 1.5 });
-  materials.set('Steel', { name: 'Steel', categories: ['Mele', 'Armor'], damageMod: 1.5, speedMod: 1, armorMod: 2, weightMod: 1.5 });
+  materials.set('Bronze', { name: 'Bronze', categories: ['Melee', 'Armor'], damageMod: 0.75, speedMod: 1.5, armorMod: 1, weightMod: 1 });
+  materials.set('Iron', { name: 'Iron', categories: ['Melee', 'Armor'], damageMod: 1, speedMod: 1.25, armorMod: 1.5, weightMod: 1.5 });
+  materials.set('Steel', { name: 'Steel', categories: ['Melee', 'Armor'], damageMod: 1.5, speedMod: 1, armorMod: 2, weightMod: 1.5 });
   materials.set('Linen', { name: 'Linen', categories: ['Armor'], armorMod: 0.5, weightMod: 0.5 });
   materials.set('Leather', { name: 'Leather', categories: ['Armor'], armorMod: 1, weightMod: 1 });
   materials.set('Elm', { name: 'Elm', categories: ['Casting', 'Ranged'], damageMod: 1, speedMod: 1, focusMod: 1 });
@@ -38,8 +38,8 @@ const getType = (categories) => {
   }
 
   const types = [
-    { name: 'Sword', category: 'Mele', damage: 4, speed: 10 },
-    { name: 'Dagger', category: 'Mele', damage: 2, speed: 5 },
+    { name: 'Sword', category: 'Melee', damage: 4, speed: 10 },
+    { name: 'Dagger', category: 'Melee', damage: 2, speed: 5 },
     { name: 'Staff', category: 'Casting', damage: 2, speed: 10, focus: 5 },
     { name: 'Bow', category: 'Ranged', damage: 2, speed: 10, distance: 50 },
     { name: 'Vest', category: 'Armor', armor: 2, weight: 10 },
@@ -104,7 +104,7 @@ const generateItem = () => {
   item.flavor = getFlavor();
 
   switch (item.type.category) {
-    case 'Mele':
+    case 'Melee':
       item.stats.damage = item.type.damage * item.material.damageMod;
       item.stats.speed = item.type.speed * item.material.speedMod;
       break;
