@@ -143,7 +143,7 @@ generate.addEventListener('click', () => {
 
   const newItem = generateItem();
 
-  const icon = newItem.flavor.name.split(' ')[newItem.flavor.name.split(' ').length - 1];
+  const icon = newItem.flavor.name.split(' ')[newItem.flavor.name.split(' ').length - 1].toLowerCase();
   const background = newItem.color.name.toLowerCase();
   item.style.display = 'block';
   item.style.border = `1px solid ${newItem.color.hex}`;
