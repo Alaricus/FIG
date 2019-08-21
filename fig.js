@@ -1,4 +1,4 @@
-const getColor = (color) => {
+const getColor = color => {
   const colors = new Map();
   colors.set('Desert', { name: 'Desert', hex: '#a93226' });
   colors.set('Jungle', { name: 'Jungle', hex: '#229954' });
@@ -12,7 +12,7 @@ const getColor = (color) => {
   return colors.get(Array.from(colors.keys())[random]);
 };
 
-const getMaterial = (material) => {
+const getMaterial = material => {
   const materials = new Map();
   materials.set('Bronze', { name: 'Bronze', categories: ['Melee', 'Armor'], damageMod: 0.75, speedMod: 1.5, armorMod: 1, weightMod: 1 });
   materials.set('Iron', { name: 'Iron', categories: ['Melee', 'Armor'], damageMod: 1, speedMod: 1.25, armorMod: 1.5, weightMod: 1.5 });
@@ -32,7 +32,7 @@ const getMaterial = (material) => {
   return materials.get(Array.from(materials.keys())[random]);
 };
 
-const getType = (categories) => {
+const getType = categories => {
   if (!Array.isArray(categories)) {
     return null;
   }
@@ -73,7 +73,7 @@ const getFlavor = () => {
   return flavors[random];
 };
 
-const getResistanceType = (hexColor) => {
+const getResistanceType = hexColor => {
   const colors = [
     parseInt(`${hexColor[1]}${hexColor[2]}`, 16),
     parseInt(`${hexColor[3]}${hexColor[4]}`, 16),
@@ -152,7 +152,7 @@ generate.addEventListener('click', () => {
   itemName.innerText = `${newItem.color.name} ${newItem.material.name} ${newItem.type.name} ${newItem.flavor.name}`;
 
   const stats = Object.entries(newItem.stats);
-  stats.forEach((stat) => {
+  stats.forEach(stat => {
     const statDiv = document.createElement('div');
     statDiv.style.marginBottom = '10px';
     statDiv.innerText = `${stat[0]}: ${stat[1]}`;
