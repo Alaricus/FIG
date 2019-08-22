@@ -132,10 +132,10 @@ const generateItem = () => {
   return item;
 };
 
-const generate = document.getElementById('generate');
-const item = document.getElementById('item');
-const itemName = document.getElementById('itemName');
-const statsDiv = document.getElementById('stats');
+const generate = document.querySelector('#generate');
+const item = document.querySelector('#item');
+const itemName = document.querySelector('#itemName');
+const statsDiv = document.querySelector('#stats');
 generate.addEventListener('click', () => {
   while (statsDiv.firstChild) {
     statsDiv.removeChild(statsDiv.firstChild);
